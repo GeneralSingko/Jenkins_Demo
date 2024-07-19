@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 
 import page.AmazonPage;
-//commit change 2
+//commit change 2 and last
 
 public class TestNGFile {
     private WebDriver driver;
