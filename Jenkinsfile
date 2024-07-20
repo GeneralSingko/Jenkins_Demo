@@ -26,6 +26,7 @@ pipeline {
                     } else {
                         bat 'mvn clean test'
                     }
+                }
             }
             post {
                 success {
