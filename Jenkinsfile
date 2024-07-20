@@ -9,12 +9,23 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'mvn clean package'
+                script {
+                    if (isUnix()) {
+                        sh 'mvn clean package'
+                    } else {
+                        bat 'mvn clean package'
+                    }
+                }
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn clean test'
+                script {
+                    if (isUnix()) {
+                        sh 'mvn clean test'
+                    } else {
+                        bat 'mvn clean test'
+                    }
             }
             post {
                 success {
