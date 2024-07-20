@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/vrun545/Jenkins_Demo.git'
+                git 'https://github.com/GeneralSingko/Jenkins_Demo.git'
             }
         }
         stage('Build') {
